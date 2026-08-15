@@ -1,0 +1,30 @@
+
+===== Query 1: FORKLIFT-07 =====
+Conflict detected. Resolved to location='Bay 12', status='in_use'.
+  [TRUSTED ] wms         reported 'Bay 12' | recency=0.89 learned_reliability=0.75 -> trust_score=0.81
+  [TRUSTED ] field_tech  reported 'Bay 12' | recency=0.50 learned_reliability=0.65 -> trust_score=0.59
+  [REJECTED] manual      reported 'Bay 4' | recency=0.12 learned_reliability=0.55 -> trust_score=0.38
+-> Resolved: Bay 12 / in_use
+
+===== Query 2: PALLET-JACK-02 =====
+Conflict detected. Resolved to location='Loading Dock', status='idle'.
+  [TRUSTED ] wms         reported 'Loading Dock' | recency=0.94 learned_reliability=0.84 -> trust_score=0.88
+  [TRUSTED ] field_tech  reported 'Loading Dock' | recency=0.35 learned_reliability=0.77 -> trust_score=0.60
+  [REJECTED] manual      reported 'Storage C' | recency=0.10 learned_reliability=0.36 -> trust_score=0.25
+-> Resolved: Loading Dock / idle
+
+===== Query 3: FORKLIFT-07 =====
+Conflict detected. Resolved to location='Bay 9', status='in_use'.
+  [TRUSTED ] wms         reported 'Bay 9' | recency=0.98 learned_reliability=0.89 -> trust_score=0.93
+  [TRUSTED ] field_tech  reported 'Bay 9' | recency=0.75 learned_reliability=0.85 -> trust_score=0.81
+  [REJECTED] manual      reported 'Bay 4' | recency=0.79 learned_reliability=0.23 -> trust_score=0.46
+-> Resolved: Bay 9 / in_use
+
+===== Query 4: SCISSOR-LIFT-03 =====
+No conflict: wms, manual agree on location='Bay 2', status='idle'.
+-> Resolved: Bay 2 / idle
+
+===== Final learned reliability per source =====
+  wms         reliability=0.93 (3/3 conflicts agreed)
+  field_tech  reliability=0.90 (3/3 conflicts agreed)
+  manual      reliability=0.15 (0/3 conflicts agreed)

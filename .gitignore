@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*_state.json
+agent_state.json
+.venv/
+venv/

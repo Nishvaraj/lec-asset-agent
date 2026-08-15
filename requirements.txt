@@ -1,0 +1,3 @@
+# Core agent has zero external dependencies (Python stdlib only).
+# Only needed for the test suite:
+pytest>=7.0
